@@ -175,6 +175,9 @@ export default function App({ Component, pageProps }: AppProps) {
                     margin-bottom: 1.6rem;
                     font-weight: 500;
                 }
+                .title:hover{
+                    color : #a1a1a1;
+                }
                 .cat-name {
                     font-family: "DungGeunMo";
                 }
