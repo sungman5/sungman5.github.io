@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = {  
+  images: {
+    loader: 'imgix',
+    path: 'https://images.unsplash.com', // 이미지 도메인    
+  },
   reactStrictMode: true,
 }
 
