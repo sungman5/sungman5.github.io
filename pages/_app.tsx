@@ -101,7 +101,10 @@ export default function App({ Component, pageProps }: AppProps) {
                 em {
                     font-size: 1.6rem;
                     font-weight: 300;
-                    margin-bottom: 0.8rem;
+                    margin-bottom: 1.6rem;
+                }
+                a:hover{
+                    text-decoration : underline;
                 }
                 ul,
                 ol {
@@ -116,29 +119,41 @@ export default function App({ Component, pageProps }: AppProps) {
                     padding-left: 2.4rem;
                 }
                 pre {
-                    background-color: #f9f9f9;
+                    background-color: #f5f5f5;
                     padding: 2rem;
                     margin-top: 2.4rem;
+                    margin-bottom: 2.4rem;
                 }
                 code {
                     font-size: 1.5rem;
-                    font-family: "Fira Code", monospace;
-                    background-color: #f9f9f9;
-                    padding: 0.2rem 0.4rem;
+                    font-family: "Fira Code", monospace;                    
+                    background-color: #f5f5f5;
+                    padding: 0.1rem 0.4rem;
                     border-radius: 0.2rem;
+                    max-width : 100%;
                 }
                 blockquote {
                     border-left: 4px solid #323232;
                     padding: 1.2rem 2rem;
                     background-color: rgba(177, 179, 251, 0.1);
+                    margin-bottom : 2rem;
+                }                
+                blockquote code{
+                    font-size: 1.5rem;
+                    font-family: "Fira Code", monospace;                    
+                    background-color: transparent;
+                    padding: 0.1rem 0.4rem;
+                    border-radius: 0.2rem;                    
                 }
                 blockquote p {
                     line-height: 2.6rem;
+                    margin-bottom : 0;
                 }
                 p img {
-                    width: 100%;
+                    max-width: 100%;
                     display: block;
                     margin-bottom: 1.6rem;
+                    // margin : auto;
                 }
                 hr {
                     border: none;
@@ -151,7 +166,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     text-decoration: underline;
                 }
                 .comments .utterances {
-                    max-width: 100%;
+                    max-width: 100%; !important;
                     margin: 0;
                 }
                 .markdown-body {
@@ -160,7 +175,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     border-bottom: 1px solid #f1f1f1;
                 }
                 article {
-                    width: 86rem;
+                    max-width: 86rem;
                     margin-bottom: 8rem;
                 }
                 .date {
