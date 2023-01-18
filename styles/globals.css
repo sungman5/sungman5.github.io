@@ -50,7 +50,7 @@ article {
 .markdown-body {
     padding-bottom: 4rem;
     margin-bottom: 1.6rem;
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid #d0d7de;
 }
 
 .markdown-body h1 {
@@ -216,18 +216,18 @@ img {
 /* 본문 기본 */
 .title {
     font-size: 3.2rem;
-    font-weight: 600;
-    margin-bottom : 1.4rem;
+    font-weight: 600;    
 }
 
 .excerpt {
     font-size: 1.6rem;
     font-weight: 400;
+    color : #6e7781;
 }
 
 .date {
     font-size: 1.4rem;
-    color: #a1a1a1;
+    color: #6e7781;
     font-family: "Fira Code", monospace;
 }
 
@@ -240,6 +240,6 @@ img {
 
 .article-header {
     margin-bottom: 2rem;
-    border-bottom: 1px solid #f6f8fa;
+    border-bottom: 1px solid #d0d7de;
     padding-bottom: 1.6rem;
 }

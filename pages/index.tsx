@@ -18,7 +18,7 @@ export default function Home({ allPosts }: any) {
                                 >
                                     <h2>{post.title}</h2>
                                     <p className="excerpt">{post.excerpt}</p>
-                                    <p className="date">{post.date}</p>                                   
+                                    <p className="date">{post.date}</p>
                                 </Link>
                             </div>
                         </>
@@ -33,7 +33,7 @@ export default function Home({ allPosts }: any) {
                     }
                     .articles {
                         margin-bottom: 2.4rem;
-                    }                   
+                    }
                     .date {
                         font-family: "Fira Code", monospace;
                         font-size: 1.4rem;
@@ -45,6 +45,8 @@ export default function Home({ allPosts }: any) {
                         font-size: 1.5rem;
                         font-weight: 400;
                         color: #6e7781;
+                        line-height: 140%;
+                        margin-bottom: 0.4rem;
                     }
                 `}
             </style>
