@@ -12,11 +12,12 @@ export default function About() {
                     alt="제가 그 유니콘입니다."
                 />
                 <p>
-                    Maybe I&apos;m the man you&apos;re looking for.
-                    <br/>개발 및 디자인 문의는 이메일로
+                    Maybe I&apos;m the man you&apos;re looking for.                    
+                    <br />
+                    오늘도 즐거운 하루 되세요.
                 </p>
                 <a href="#" onClick={readyAlert}>
-                    go to works history→
+                    works history
                 </a>
             </section>
             <style jsx>

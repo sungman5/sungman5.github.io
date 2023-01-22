@@ -10,22 +10,12 @@ export default function memoIndex({ sortedAllPosts }: any) {
                 ) : (
                     sortedAllPosts.map((post: any) => {
                         return (
-                            <>
-                                <article className="articles">
-                                    <Link
-                                        href={`/memo/${post.id}`}
-                                        key={post.id}
-                                    >
-                                        <h2>{post.title}</h2>
-                                        <p className="excerpt">
-                                            {post.excerpt}
-                                            <span className="date">
-                                                ｜{post.date}
-                                            </span>
-                                        </p>
-                                    </Link>
-                                </article>
-                            </>
+                            <article className="articles" key={post.id}>
+                                <Link href={`/memo/${post.id}`}>
+                                    <h2>{post.title}</h2>
+                                    <p className="excerpt">{post.excerpt}</p>
+                                </Link>
+                            </article>
                         );
                     })
                 )}

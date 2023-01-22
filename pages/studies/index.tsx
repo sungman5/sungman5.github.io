@@ -7,22 +7,12 @@ export default function StudiesIndex({ sortedAllPosts }: any) {
             <section>
                 {sortedAllPosts.map((post: any) => {
                     return (
-                        <>
-                            <article className="articles">
-                                <Link
-                                    href={`/studies/${post.id}`}
-                                    key={post.id}
-                                >
-                                    <h2>{post.title}</h2>
-                                    <p className="excerpt">
-                                        {post.excerpt}
-                                        <span className="date">
-                                            ｜{post.date}
-                                        </span>
-                                    </p>
-                                </Link>
-                            </article>
-                        </>
+                        <article className="articles" key={post.id}>
+                            <Link href={`/studies/${post.id}`}>
+                                <h2>{post.title}</h2>
+                                <p className="excerpt">{post.excerpt}</p>
+                            </Link>
+                        </article>
                     );
                 })}
             </section>
@@ -34,7 +24,7 @@ export default function StudiesIndex({ sortedAllPosts }: any) {
                     }
                     .articles {
                         margin-bottom: 2.4rem;
-                    }                   
+                    }
                 `}
             </style>
         </>
@@ -42,14 +32,14 @@ export default function StudiesIndex({ sortedAllPosts }: any) {
 }
 
 export async function getStaticProps() {
-    const studiesData = getStudiesData();    
-     const sortedAllPosts = studiesData.sort((a:any, b:any) => {
-         if (a.date < b.date) {
-             return 1;
-         } else {
-             return -1;
-         }
-     });
+    const studiesData = getStudiesData();
+    const sortedAllPosts = studiesData.sort((a: any, b: any) => {
+        if (a.date < b.date) {
+            return 1;
+        } else {
+            return -1;
+        }
+    });
     return {
         props: {
             sortedAllPosts,

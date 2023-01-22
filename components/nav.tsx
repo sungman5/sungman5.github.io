@@ -4,8 +4,7 @@ import { useRouter } from "next/router";
 import { readyAlert } from "../lib/ready_alert";
 
 export default function Nav() {
-    const router = useRouter();
-    console.log(router);
+    const router = useRouter();    
     return (
         <>
             <nav>
@@ -53,14 +52,12 @@ export default function Nav() {
                             style={{
                                 color:
                                     router.pathname === "/memo" ||
-                                    router.asPath ===
-                                        `/memo/${router.query.id}`
+                                    router.asPath === `/memo/${router.query.id}`
                                         ? "#0969da"
                                         : `#6e7781`,
                                 textDecoration:
                                     router.pathname === "/memo" ||
-                                    router.asPath ===
-                                        `/memo/${router.query.id}`
+                                    router.asPath === `/memo/${router.query.id}`
                                         ? "underline"
                                         : `none`,
                             }}
@@ -76,7 +73,6 @@ export default function Nav() {
                         style={{
                             display: "flex",
                             alignItems: "center",
-                            gap: "0.4rem",
                         }}
                     >
                         <li className="nav-item" style={{ color: "#6e7781" }}>
@@ -84,8 +80,8 @@ export default function Nav() {
                         </li>
                         <Image
                             src={"/img/iconmonstr-external-link-thin.svg"}
-                            width={14}
-                            height={14}
+                            width={16}
+                            height={16}
                             alt={"open in new"}
                             style={{ margin: 0 }}
                         />
@@ -113,7 +109,12 @@ export default function Nav() {
                 {`
                     nav {
                         overflow-x: scroll;
+                        -ms-overflow-style: none;
                     }
+                    nav::-webkit-scrollbar{
+                        display:none;
+                    }
+                    
                     .nav-list {
                         display: flex;
                         gap: 3rem;

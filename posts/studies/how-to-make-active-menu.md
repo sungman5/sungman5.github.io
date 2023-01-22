@@ -2,6 +2,7 @@
 title: 'NextJS 정적 블로그 액티브 메뉴 만들기'
 date: '2023-01-16'
 excerpt : 'useRouter 모듈 + 삼항연산자 + 논리연산자'
+author : 'Walter'
 category : 'studies'
 ---
 사실은 Next.js의 useRouter 모듈과 자바스크립트 논리연산자, 삼항연산자를 이용한 간단한 방법이다. 전체 코드는 아래와 같다.

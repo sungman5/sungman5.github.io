@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import matter from "gray-matter";
+import Image from "next/image";
 import path from "path";
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
@@ -7,7 +8,6 @@ import rehypeStringify from "rehype-stringify";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
-remarkRehype;
 import { unified } from "unified";
 import Comments from "../../lib/utterances";
 
@@ -16,7 +16,7 @@ const memo = "posts/memo";
 export default function OtherPost({ postData }: any) {
     return (
         <>
-            <article>
+            <article key={postData.id}>
                 <div className="article-header">
                     <h1 className="title">{postData.title}</h1>
                     <p className="excerpt">{postData.excerpt}</p>
@@ -27,9 +27,9 @@ export default function OtherPost({ postData }: any) {
                     dangerouslySetInnerHTML={{
                         __html: postData.contentHtml,
                     }}
-                />
+                />                
                 <Comments />
-            </article>            
+            </article>           
         </>
     );
 }
@@ -58,11 +58,6 @@ export async function getStaticProps({ params }: any) {
     const filePath = path.join(memo, `${id}.md`);
     const fileContents = readFileSync(filePath, "utf-8");
     const markdown = matter(fileContents);
-
-    {
-        console.log("파일콘텐츠", fileContents);
-        console.log("마크다운", markdown);
-    }
 
     const processedContent = await unified()
         .use(remarkGfm)

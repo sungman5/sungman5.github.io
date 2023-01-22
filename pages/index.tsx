@@ -9,22 +9,12 @@ export default function Home({ sortedAllPosts }: any) {
             <section>
                 {sortedAllPosts.map((post: any) => {
                     return (
-                        <>
-                            <div className="articles">
-                                <Link
-                                    href={`/${post.category}/${post.id}`}
-                                    key={post.id}
-                                >
-                                    <h2>{post.title}</h2>
-                                    <p className="excerpt">
-                                        {post.excerpt}
-                                        <span className="date">
-                                            ｜{post.date}
-                                        </span>
-                                    </p>
-                                </Link>
-                            </div>
-                        </>
+                        <div className="articles" key={post.id}>
+                            <Link href={`/${post.category}/${post.id}`}>
+                                <h2>{post.title}</h2>
+                                <p className="excerpt">{post.excerpt}</p>
+                            </Link>
+                        </div>
                     );
                 })}
             </section>
@@ -40,7 +30,6 @@ export default function Home({ sortedAllPosts }: any) {
                     .category {
                         color: rgb(48, 115, 179);
                     }
-                    
                 `}
             </style>
         </>
@@ -53,13 +42,13 @@ export async function getStaticProps() {
     const memoPosts = getMemoData();
 
     const allPosts = [...studiesPosts, ...memoPosts];
-    const sortedAllPosts = allPosts.sort((a, b)=>{
-        if(a.date < b.date){
-            return 1
+    const sortedAllPosts = allPosts.sort((a, b) => {
+        if (a.date < b.date) {
+            return 1;
         } else {
-            return -1
+            return -1;
         }
-    })    
+    });
 
     return {
         props: {
