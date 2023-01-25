@@ -290,6 +290,6 @@ img {
 
 .article-header {
     margin-bottom: 2rem;
-    border-bottom: 1px solid #d0d7de;
+    /* border-bottom: 1px solid #d0d7de; */
     padding-bottom: 1.6rem;
 }

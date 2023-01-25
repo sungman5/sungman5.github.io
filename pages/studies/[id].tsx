@@ -1,6 +1,5 @@
 import { readFileSync } from "fs";
 import matter from "gray-matter";
-import Image from "next/image";
 import path from "path";
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
@@ -18,9 +17,9 @@ export default function DevPost({ postData }: any) {
         <>
             <article key={postData.id}>
                 <div className="article-header">
-                    <p className="date">{postData.date}</p>
                     <h1 className="title">{postData.title}</h1>
                     <p className="excerpt">{postData.excerpt}</p>                    
+                    <p className="date">{postData.date}</p>
                 </div>
                 <div
                     className="markdown-body"
