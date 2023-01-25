@@ -8,7 +8,7 @@ export default function SiteFooter() {
     return (
         <>
             <footer>
-                <p>&copy;UNICORN-IS-HERE {year}</p>
+                <p style={{fontSize:'1.4rem' }}>&copy;UNICORN-IS-HERE {year}</p>
                 <Link
                     href={"https://github.com/sungman5"}
                     title="별거없지만 깃허브 방문하기"
@@ -40,10 +40,7 @@ export default function SiteFooter() {
                         display: flex;
                         gap: 1.8rem;                        
                         padding-top: 2.4rem;
-                    }
-                    p{
-                        font-size : 1.6rem;
-                    }
+                    }            
                 `}
             </style>
         </>

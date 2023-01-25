@@ -67,16 +67,15 @@ export default function Nav() {
                         </li>
                     </Link>
                     <Link
-                        href={`#`}
-                        onClick={readyAlert}
-                        // target={"_blank"}
+                        href={`https://walterdesign.co.kr`}                        
+                        target={"_blank"}
                         style={{
                             display: "flex",
                             alignItems: "center",
                         }}
                     >
                         <li className="nav-item" style={{ color: "#6e7781" }}>
-                            works
+                           works
                         </li>
                         <Image
                             src={"/img/iconmonstr-external-link-thin.svg"}
