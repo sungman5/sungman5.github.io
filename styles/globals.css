@@ -73,6 +73,7 @@ article {
 
 .markdown-body h2 {
     font-size: 2.8rem;
+    margin-top: 2.4rem;
     margin-bottom: 0.8rem;
     line-height: 140%;
     font-weight: 600;
@@ -81,13 +82,14 @@ article {
 .markdown-body h3 {
     font-size: 2.4rem;
     margin-bottom: 0.8rem;
-    
+    margin-top: 2.4rem;
     font-weight: 600;
     line-height: 140%;
 }
 
 .markdown-body h4 {
     font-size: 2.4rem;
+    margin-top: 2.4rem;
     margin-bottom: 0.8rem;
     line-height: 140%;
     font-weight: 600;
@@ -95,6 +97,7 @@ article {
 
 .markdown-body h5 {
     font-size: 2rem;
+    margin-top: 2.4rem;
     margin-bottom: 0.8rem;
     line-height: 140%;
     font-weight: 600;
@@ -102,6 +105,7 @@ article {
 
 .markdown-body h6 {
     font-size: 1.7rem;
+    margin-top: 2.4rem;
     margin-bottom: 0.8rem;
     font-weight: 600;
 }
@@ -111,7 +115,7 @@ article {
 }
 
 .markdown-body p {
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
 }
 
 .markdown-body p a {
@@ -153,8 +157,8 @@ ul {
 .markdown-body pre {
     background-color: #f6f8fa;
     padding: 2.4rem;
-    margin-top: 2.4rem;
-    margin-bottom: 2.4rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
     overflow-x: scroll;
 }
 
